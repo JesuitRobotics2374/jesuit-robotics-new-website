@@ -3,8 +3,8 @@ import InfoCard from "./InfoCard";
 
 export default function InfoCards() {
   return (
-    <div className=" flex justify-evenly items-center my-20">
-      <InfoCard title="-- Members" icon={<BsFillPeopleFill />} />
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 my-20 w-full">
+      <InfoCard title="50 Members" icon={<BsFillPeopleFill />} />
       <InfoCard title="1 Team" icon={<BsFillPeopleFill />} />
       <InfoCard title="16 Years" icon={<BsFillCalendarEventFill />} />
     </div>
