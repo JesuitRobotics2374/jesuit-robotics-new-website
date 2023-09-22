@@ -1,3 +1,4 @@
+import EmailCard from "./components/home/EmailCard";
 import TitleIntro from "./components/home/TitleIntro";
 import InfoCards from "./components/home/info-cards-section/InfoCards";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <TitleIntro />
       <InfoCards />
+      <EmailCard />
     </div>
   );
 }

@@ -3,6 +3,7 @@ import {
   BiLogoInstagramAlt,
   BiLogoYoutube,
 } from "react-icons/bi";
+import { HiMail } from "react-icons/hi";
 
 const socialLinks = [
   {
@@ -19,6 +20,11 @@ const socialLinks = [
     id: 3,
     icon: <BiLogoYoutube />,
     link: "https://www.youtube.com/@2374_jesuit_robotics/",
+  },
+  {
+    id: 4,
+    icon: <HiMail />,
+    link: "mailto:pwhite@jesuitmail.org",
   },
 ];
 
@@ -41,7 +47,7 @@ export default function Footer() {
       </div>
 
       <h6 className=" p-2 text-gray-800 dark:text-slate-300 uppercase">
-        Copyright 2023 Jesuit High School Robotics - All rights reserved.
+        Copyright &copy; 2023 Jesuit High School Robotics - All rights reserved.
       </h6>
     </footer>
   );

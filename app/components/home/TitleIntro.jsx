@@ -36,9 +36,22 @@ export default function TitleIntro() {
       <Image
         src="/svg/decoration-wave-2.svg"
         width={900}
-        height={9000}
+        height={900}
         alt=""
         className="hidden lg:block absolute top-0 right-0 z-20 select-none"
+        priority={true}
+        draggable="false"
+        // onLoadingComplete={() =>
+
+        // }
+      />
+
+      <Image
+        src="/svg/decoration-wave-bottom-left.svg"
+        width={250}
+        height={250}
+        alt=""
+        className="absolute bottom-0 left-0 z-20 select-none"
         priority={true}
         draggable="false"
         // onLoadingComplete={() =>
