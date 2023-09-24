@@ -45,12 +45,21 @@
   .button-filled {
     @apply bg-green-800 text-white p-3 px-4;
   }
+
   .button-outline {
     @apply text-green-800 border-2 border-green-800 hover:bg-green-800 hover:text-white focus-visible:bg-green-800 focus-visible:text-white p-3 px-4;
   }
 
   .navbar-elements {
     @apply text-green-800;
+  }
+
+  .light-green-bg {
+    @apply bg-gradient-to-br from-green-200 to-green-300;
+  }
+
+  .main-green-bg {
+    @apply bg-gradient-to-br from-green-500 to-green-600;
   }
 }
 

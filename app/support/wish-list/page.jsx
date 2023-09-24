@@ -24,25 +24,34 @@ const linksList = [
 
 export default function WishList() {
   return (
-    <div>
-      <h2>Wish List</h2>
-      <p>
-        Our team is fortunate to have dedicated and supportive parents. We are
-        often asked, &quot;what do you need&quot;?. To enhance our performance,
-        experience, and learning opportunities , we have compiled a wish list of
-        items . These items do not fit into our budget but would benefit our
-        team and contribute to the growth and development of each member.
-      </p>
-      <div className="flex justify-evenly items-center my-10">
-        {linksList.map((link) => (
-          <ListLink
-            name={link.name}
-            link={link.link}
-            iconPath={link.iconPath}
-            key={link.id}
-          />
-        ))}
+    <div className="flex justify-evenly items-center">
+      <div className="max-w-xl">
+        <h2>Wish List</h2>
+        <p>
+          Our team is fortunate to have dedicated and supportive parents. We are
+          often asked, &quot;what do you need&quot;?. To enhance our
+          performance, experience, and learning opportunities , we have compiled
+          a wish list of items . These items do not fit into our budget but
+          would benefit our team and contribute to the growth and development of
+          each member.
+        </p>
+        <div className="flex justify-evenly items-center my-10">
+          {linksList.map((link) => (
+            <ListLink
+              name={link.name}
+              link={link.link}
+              iconPath={link.iconPath}
+              key={link.id}
+            />
+          ))}
+        </div>
       </div>
+      <Image
+        src="/svg/wish-list/wishes-animated.svg"
+        width={400}
+        height={400}
+        alt="Wish"
+      />
     </div>
   );
 }

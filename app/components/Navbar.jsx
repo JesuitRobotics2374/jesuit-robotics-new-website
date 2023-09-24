@@ -37,7 +37,7 @@ export default function Navbar() {
           "bg-gradient-to-r from-green-50/75 dark:from-green-200/75 via-green-100/80 dark:via-green-300/80 to-green-50/70 dark:to-green-200/80 backdrop-blur-lg duration-200 justify-evenly"
         } duration-200 p-10 py-5 w-full fixed select-none flex justify-between items-center gap-10 z-40`}
       >
-        <Link href="/">
+        <Link href="/" className="hover:scale-110 active:scale-90 duration-150">
           <Image
             src="/logos/green-logo-scaled-down.png"
             alt="Jesuit Crusader Bots Logo"

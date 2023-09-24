@@ -1,5 +1,6 @@
 import { Anton } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 
 const anton = Anton({ subsets: ["latin"], weight: ["400"] });
 
@@ -71,7 +72,9 @@ export default function TitleIntro() {
         // }
       />
 
-      <button className="button-outline z-30">Support the team!</button>
+      <Link href="/support" className="z-30">
+        <button className="button-outline">Support the team!</button>
+      </Link>
       {/* <div className="absolute bottom-10">
         <span>Scroll to learn more</span>
       </div> */}
