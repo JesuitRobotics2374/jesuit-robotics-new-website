@@ -32,8 +32,9 @@
     @apply border-2 border-green-600 rounded-md;
   }
 
-  input {
-    @apply border-none rounded-md select-none outline-none;
+  input,
+  textarea {
+    @apply border-none rounded-md select-none outline-none p-2 resize-none;
   }
 
   button {
@@ -43,7 +44,7 @@
 
 @layer components {
   .button-filled {
-    @apply bg-green-800 text-white p-3 px-4;
+    @apply bg-green-800 border-2 border-green-800 text-white p-3 px-4;
   }
 
   .button-outline {
@@ -60,6 +61,28 @@
 
   .main-green-bg {
     @apply bg-gradient-to-br from-green-500 to-green-600;
+  }
+
+  /* Forms */
+  .form-field {
+    @apply grid mb-5;
+  }
+
+  .form-field div {
+    @apply flex items-baseline justify-between;
+  }
+
+  .form-field input,
+  textarea {
+    @apply box-border w-full bg-white inline-flex min-h-[9] appearance-none items-center justify-center rounded-xl px-3 py-5 leading-6 outline-none;
+  }
+
+  .form-message {
+    @apply opacity-80 text-base bg-gradient-to-br from-green-800 to-green-900 inline-block text-transparent bg-clip-text pr-5;
+  }
+
+  .form-label {
+    @apply text-2xl bg-gradient-to-br from-green-700 to-green-700 inline-block text-transparent bg-clip-text font-medium leading-8 pb-2;
   }
 }
 

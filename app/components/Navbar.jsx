@@ -21,7 +21,7 @@ export default function Navbar() {
     window.addEventListener("scroll", () => {
       // Get the current scroll position
       var scrollPosition = window.scrollY;
-      console.log(scrollPosition);
+      // console.log(scrollPosition);
       if (scrollPosition > 100) {
         setNavbarState(true);
       } else {
