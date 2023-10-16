@@ -11,7 +11,7 @@ export default function EmailCard() {
         className="rounded-3xl"
         alt="Group photo of the Jesuit Robotics Club with their creation, the robot, in front of them."
       />
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-bl from-transparent via-transparent to-slate-200/90" />
+      <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-bl from-transparent via-transparent to-slate-200/90" />
       <button className="absolute bottom-6 left-6">Email Us</button>
     </div>
   );

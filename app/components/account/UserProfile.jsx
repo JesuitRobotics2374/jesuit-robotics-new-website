@@ -1,24 +1,13 @@
-"use client";
 import UserDisplayName from "./UserDisplayName";
 import UserPhoto from "./UserPhoto";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "@/app/libraries/firebase";
-import UserLoading from "./UserLoading";
 
-export default function UserProfile({ showPhoto, showName }) {
-  const [user, loading] = useAuthState(auth);
-
-  if (loading) return <UserLoading />;
+export default function UserProfile() {
   return (
-    <
-      // className={
-      //   showName &&
-      //   showPhoto &&
-      //   "flex justify-center items-center flex-col text-center"
-      // }
-    >
-      {showPhoto && <UserPhoto user={user} />}
-      {showName && <UserDisplayName user={user} />}
-    </>
+    <div className="mx-auto flex flex-col items-center">
+      <UserPhoto size="20" />
+      <h2 className="p-0">
+        Hi, <UserDisplayName />
+      </h2>
+    </div>
   );
 }

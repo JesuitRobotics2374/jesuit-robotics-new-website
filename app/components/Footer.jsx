@@ -1,9 +1,19 @@
+"use client";
+
 import {
   BiLogoFacebookCircle,
   BiLogoInstagramAlt,
   BiLogoYoutube,
 } from "react-icons/bi";
 import { HiMail } from "react-icons/hi";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  slideIn,
+  staggerContainer,
+  textVariant,
+} from "../libraries/framer-motion-utils";
+import { TitleText, TypingText } from "./ui/TypingText";
 
 const socialLinks = [
   {
@@ -30,25 +40,38 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="text-center p-6 mt-10">
-      <hr className=" border-2 border-solid border-green-700 my-5 mx-auto rounded-md w-2/3 md:w-1/2 lg:mx-90 max-w-xs" />
+    <motion.footer
+      variants={staggerContainer}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.5 }}
+      className="mt-10 p-6 pb-10 text-center"
+    >
+      <motion.hr
+        variants={fadeIn("up", "spring", 0, 0.5)}
+        className=" lg:mx-90 mx-auto my-5 w-2/3 max-w-xs rounded-md border-2 border-solid border-green-700 md:w-1/2"
+      />
 
-      <div className="flex w-2/3 justify-evenly items-center mx-auto my-10">
+      <div className="mx-auto my-10 flex w-2/3 items-center justify-evenly">
         {socialLinks.map((socialLink) => (
-          <a
+          <motion.a
+            variants={fadeIn("up", "spring", socialLink.id * 0.1, 0.1)}
             href={socialLink.link}
             target="_blank"
-            className="hover:text-green-800 duration-200 text-4xl"
+            className="hover-zoom text-4xl hover:text-green-800 "
             key={socialLink.id}
           >
             {socialLink.icon}
-          </a>
+          </motion.a>
         ))}
       </div>
 
-      <h6 className=" p-2 text-gray-800 dark:text-slate-300 uppercase">
+      <motion.h6
+        variants={textVariant(0.6)}
+        className=" p-2 uppercase text-gray-800 dark:text-gray-300"
+      >
         Copyright &copy; 2023 Jesuit High School Robotics - All rights reserved.
-      </h6>
-    </footer>
+      </motion.h6>
+    </motion.footer>
   );
 }
