@@ -122,11 +122,23 @@ export default function Navbar() {
             //   }
             //   key={link.id}
             // >
-            <Link href={link.link} key={link.id}>
-              <h4 className={currentPathname == link.link ? "font-medium" : ""}>
-                {link.title}
-              </h4>
-            </Link>
+
+            <div
+              key={link.id}
+              className={
+                link.id != 5 &&
+                "group relative flex cursor-pointer flex-wrap items-center justify-center gap-1 overflow-hidden transition duration-300 ease-in-out"
+              }
+            >
+              <Link href={link.link}>
+                <h4 className={currentPathname == link.link ? "font-bold" : ""}>
+                  {link.title}
+                </h4>
+              </Link>
+              {link.id != 5 && (
+                <div className="absolute bottom-0 right-full h-[0.2rem] w-full rounded-full bg-green-700 opacity-0 duration-300 group-hover:translate-x-full group-hover:opacity-100 group-active:bg-green-700 dark:bg-green-200 dark:group-hover:bg-green-200 dark:group-active:bg-green-300" />
+              )}
+            </div>
             // </motion.span>
           ))}
         </div>

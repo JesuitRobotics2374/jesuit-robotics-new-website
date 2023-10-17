@@ -21,7 +21,7 @@ export default function TitleIntro() {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.5 }}
-      className="flex h-[75vh] w-full flex-col items-center justify-evenly "
+      className=" flex h-[75vh] w-full flex-col items-center justify-evenly"
     >
       <div className="to-green-7000 flex select-none flex-col items-center justify-center gap-4 bg-gradient-to-b from-green-600 via-green-600 to-green-800 bg-clip-text text-transparent">
         <motion.span

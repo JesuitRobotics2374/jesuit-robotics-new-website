@@ -1,5 +1,13 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  fadeIn,
+  textVariant,
+  textVariant2,
+} from "@/app/libraries/framer-motion-utils";
 
 const supportLinks = [
   {
@@ -29,13 +37,24 @@ const supportLinks = [
 export default function Support() {
   return (
     <div>
-      <h1>Support The Team</h1>
+      <motion.h1
+        variants={textVariant2}
+        initial="hidden"
+        whileInView="show"
+        className="title"
+      >
+        Support The Team
+      </motion.h1>
 
       <div className="my-5 grid gap-5 2xl:grid-cols-2">
         {supportLinks.map((link) => (
-          <div
+          <motion.div
             key={link.id}
             className="main-green-bg mx-auto flex h-full w-full max-w-2xl items-center justify-between rounded-3xl p-8"
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: false, amount: 0.2 }}
+            variants={fadeIn("up", "spring", 0.2 * link.id, 0.5)}
           >
             <div className="flex flex-col gap-6">
               <h2 className="p-0">{link.name}</h2>
@@ -52,7 +71,7 @@ export default function Support() {
               draggable="false"
               priority
             />
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
