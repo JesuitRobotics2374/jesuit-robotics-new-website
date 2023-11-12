@@ -1,16 +1,17 @@
 import TitleIntro from "../components/home/TitleIntro";
-import YoutubeVideo from "../components/home/YoutubeVideo";
 import InfoCards from "../components/home/info-cards-section/InfoCards";
 import WhoWeAreCard from "../components/home/WhoWeAreCard";
 import Videos from "../components/home/Videos";
+import SignInSection from "../components/home/SignInSection";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <TitleIntro />
-      <WhoWeAreCard />
       <InfoCards />
+      <WhoWeAreCard />
+      <SignInSection />
       <Videos />
-    </div>
+    </>
   );
 }

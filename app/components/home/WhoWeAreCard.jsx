@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WhoWeAreCard() {
   return (
-    <div className="mt-32">
+    <section className="mb-20 mt-10">
       <div className="relative mx-auto max-w-2xl rounded-3xl lg:right-[15%]">
         <Image
           src="/photos/group-photo.webp"
@@ -28,6 +28,6 @@ export default function WhoWeAreCard() {
           <button className="button-outline mt-5">Learn more</button>
         </Link>
       </div>
-    </div>
+    </section>
   );
 }

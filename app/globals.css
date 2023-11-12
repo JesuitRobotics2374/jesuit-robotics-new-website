@@ -32,10 +32,6 @@
     @apply leading-relaxed dark:text-green-100;
   }
 
-  button {
-    @apply text-green-700 outline-none;
-  }
-
   hr {
     @apply rounded-md border-2 border-green-600;
   }
@@ -46,11 +42,15 @@
   }
 
   button {
-    @apply select-none rounded-full p-2 px-3.5 text-center outline-none duration-300 hover:scale-105 focus-visible:scale-105 active:scale-95;
+    @apply select-none rounded-full p-2 px-3.5 text-center text-green-700 outline-none duration-300 hover:scale-105 focus-visible:scale-105 active:scale-95;
   }
 }
 
 @layer components {
+  .button {
+    @apply select-none rounded-full p-2 px-3.5 text-center text-green-700 outline-none duration-300 hover:scale-105 focus-visible:scale-105 active:scale-95;
+  }
+
   .button-fill {
     @apply border-2 border-green-800 bg-green-800 text-white dark:border-green-100 dark:bg-green-100 dark:text-green-900;
   }
@@ -128,4 +128,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+/* Firefox */
+* {
+  scrollbar-color: rgb(37, 143, 85) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(37, 143, 85);
+  border-radius: 14px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(20, 103, 57);
 }

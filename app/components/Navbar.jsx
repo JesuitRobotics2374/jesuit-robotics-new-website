@@ -76,6 +76,7 @@ export default function Navbar() {
   return (
     <>
       <motion.nav
+        key={navbarState}
         variants={{
           hidden: {
             opacity: 0,
@@ -90,9 +91,9 @@ export default function Navbar() {
             opacity: 1,
             y: 0,
             transition: {
-              type: "spring",
+              type: "linear",
               stiffness: 80,
-              delay: currentPathname == "/" ? 1.3 : 0.1,
+              delay: currentPathname == "/" && !navbarState ? 1.3 : 0.1,
             },
           },
         }}

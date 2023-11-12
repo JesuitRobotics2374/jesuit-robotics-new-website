@@ -14,9 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} w-full`}>
+      <body className={`${inter.className} w-full overflow-x-hidden`}>
         <Navbar />
-        <main className="min-h-[85vh] w-full overflow-x-hidden p-10">
+        <main className="min-h-[85vh] w-full overflow-clip p-10">
           {children}
           <Footer />
         </main>
