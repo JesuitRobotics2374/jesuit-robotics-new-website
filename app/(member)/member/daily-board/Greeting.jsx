@@ -18,5 +18,5 @@ export default function Greeting() {
 
   if (userLoading) return <Loading sizes="w-96 h-12" center />;
 
-  return <h1 className="tracking-wide">{greeting}</h1>;
+  return <h1 className="text-6xl tracking-wide">{greeting}</h1>;
 }

@@ -98,19 +98,7 @@ export default function Account() {
       title: "Update Account",
       descrition: "Update your account's info...",
       icon: <MdAccountCircle />,
-      onClickFunction: () => {
-        setAlertDialogContent({
-          title: "Delete Account",
-          description:
-            "This action cannot be undone. This will permanently delete your account and remove all of your data.",
-          action: signOutCurrentUser,
-          buttons: {
-            cancel: "Cancel",
-            continue: "Delete Account",
-          },
-        });
-        setShowAlertDialog(true);
-      },
+      onClickFunction: () => {},
     },
     {
       id: 3,

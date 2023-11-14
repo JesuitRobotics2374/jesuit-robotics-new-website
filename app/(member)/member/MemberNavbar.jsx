@@ -22,7 +22,7 @@ export default function MemberNavbar() {
             alt="Jesuit Crusader Bots Logo"
             width={300}
             height={300}
-            className="h-24 w-24 select-none rounded-full bg-gradient-to-br dark:from-black/70 dark:to-black"
+            className="h-24 w-24 select-none rounded-full bg-gradient-to-br dark:from-green-200/60 dark:to-green-200/80"
             draggable="false"
             priority
           />

@@ -11,8 +11,10 @@ export default function UserPhoto({ size }) {
   return (
     <>
       {loading && (
-        <span className="m-4 overflow-hidden rounded-full align-middle outline outline-4 outline-offset-4 outline-green-700/50">
-          <Loading sizes={`h-${size} w-${size}`} circle />
+        <span
+          className={`h-${size} w-${size} m-4 overflow-hidden rounded-full align-middle outline outline-4 outline-offset-4 outline-green-700/50`}
+        >
+          <Loading sizes={`h-full w-full`} circle />
         </span>
       )}
       {!loading && user && (
@@ -21,17 +23,15 @@ export default function UserPhoto({ size }) {
         >
           {!loading && user && (
             <>
-              {/* <Avatar.Image
+              <Avatar.Image
                 className="h-full w-full select-none rounded-full object-cover"
                 src={user.photoURL}
                 alt={user.displayName}
                 draggable="false"
                 referrerPolicy="no-referrer"
-              /> */}
+              />
               <Avatar.Fallback
-                className={`flex h-full w-full items-center justify-center ${
-                  size > "15" ? "text-3xl" : "text-xl"
-                } font-medium text-green-100 duration-200`}
+                className={`flex h-full w-full items-center justify-center text-3xl font-medium text-green-100 duration-200`}
                 delayMs={100}
               >
                 {user.displayName.match(/\b(\w)/g).join("")}

@@ -7,6 +7,8 @@ import { useCollectionOnce } from "react-firebase-hooks/firestore";
 import DocsNavbar from "./DocsNavbar";
 import { useState } from "react";
 import DocsItem from "./DocsItem";
+import { BsPlusCircleFill } from "react-icons/bs";
+import Link from "next/link";
 
 export default function Docs() {
   const [user, userLoading] = useAuthState(auth);
@@ -28,6 +30,10 @@ export default function Docs() {
         setSelectedDoc={setSelectedDoc}
       />
       <DocsItem selectedDoc={selectedDoc} />
+
+      <Link href="/member/docs/new">
+        <BsPlusCircleFill className="hover-zoom absolute bottom-10 right-10 text-6xl text-green-900" />
+      </Link>
     </div>
   );
 }
